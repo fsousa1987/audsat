@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "02eb27be-961d-49a8-8890-689eaa5c0706",
+		"name": "Audsat",
+		"description": "Postman collection relating to the Audsat challenge.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6705320"
+	},
+	"item": [
+		{
+			"name": "Find insurance by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/insurance/budget/899674f7-0dcd-4bcf-8aab-c92358b2d251",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"insurance",
+						"budget",
+						"899674f7-0dcd-4bcf-8aab-c92358b2d251"
+					]
+				},
+				"description": "Find insurance by id"
+			},
+			"response": []
+		},
+		{
+			"name": "Update insurance",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer\": {\r\n        \"name\": \"Otávio Marcos Vinicius Martins Vieira\"\r\n    },\r\n    \"car\": {\r\n        \"model\": \"Uno\",\r\n        \"manufacturer\": \"Fiat\",\r\n        \"year\": \"1996\",\r\n        \"fipeValue\": 8855.0\r\n    },\r\n    \"isActive\": false,\r\n    \"budget\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/insurance/budget/899674f7-0dcd-4bcf-8aab-c92358b2d251",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"insurance",
+						"budget",
+						"899674f7-0dcd-4bcf-8aab-c92358b2d251"
+					]
+				},
+				"description": "Update an insurance by id"
+			},
+			"response": []
+		},
+		{
+			"name": "Save insurance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer\": {\r\n        \"name\": \"Otávio Marcos Vinicius Martins Vieira\",\r\n        \"driver\": {\r\n            \"document\": \"662.909.241-42\",\r\n            \"birthDate\": \"1987-01-02\"\r\n        }\r\n    },\r\n    \"createdDate\": \"2024-02-02T00:00:00\",\r\n    \"updatedDate\": \"2024-05-06T19:43:12.247791\",\r\n    \"car\": {\r\n        \"model\": \"Uno\",\r\n        \"manufacturer\": \"Fiat\",\r\n        \"year\": \"1996\",\r\n        \"fipeValue\": 8855.00\r\n    },\r\n    \"isActive\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/insurance/budget",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"insurance",
+						"budget"
+					]
+				},
+				"description": "Save a new insurance"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete insurance",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/insurance/budget/899674f7-0dcd-4bcf-8aab-c92358b2d251",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"insurance",
+						"budget",
+						"899674f7-0dcd-4bcf-8aab-c92358b2d251"
+					]
+				},
+				"description": "Delete insurance by id"
+			},
+			"response": []
+		}
+	]
+}

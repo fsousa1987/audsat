@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  audsat:
+    build: '.\audsat'
+    container_name: audsat
+    networks:
+      - audsat
+    ports:
+      - "8080:8080"
+
+networks:
+  audsat:
+    driver: bridge
